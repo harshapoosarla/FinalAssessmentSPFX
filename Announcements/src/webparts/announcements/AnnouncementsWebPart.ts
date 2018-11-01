@@ -45,7 +45,7 @@ export default class AnnouncementsWebPart extends BaseClientSideWebPart<IAnnounc
       this.domElement.querySelector('#error').innerHTML = "Sorry this does not work in local workbench";
     } else {
       this.context.spHttpClient.get(
-        this.context.pageContext.web.absoluteUrl + `/_api/Web/Lists/getByTitle('Announcements')/items?$select=Title,ImageURL,ID,Description&$top=5&$orderby=Created desc`, SPHttpClient.configurations.v1
+      this.context.pageContext.web.absoluteUrl + `/_api/Web/Lists/getByTitle('Announcements')/items?$select=Title,ImageURL,ID,Description&$top=5&$orderby=Created desc`, SPHttpClient.configurations.v1
       ).then((Response : SPHttpClientResponse)=>{
         Response.json().then((listObjects : any) =>{
           var ImageSliderCount = 0;
@@ -53,19 +53,19 @@ export default class AnnouncementsWebPart extends BaseClientSideWebPart<IAnnounc
             if(ImageSliderCount===0){
             
               html +=`<div class='item active'><img src="${element.ImageURL.Url}" alt="${element.Title}" style='width:100%;height:300px;opacity: 0.9;'>
-                      <div class="inverted-bar" data-content="Lorem ipsum dolor sit amet" style=" position: absolute;top: 15%;left: 35%;transform: translate(-50%, -50%);
-                      ">${element.Title}</div>
-                      <div class="inverted-bar" data-content="Lorem ipsum dolor sit amet" style=" position: absolute;top: 30%;left:35%;transform: translate(-50%, -50%);
-                      display:block;">${element.Description}</div>
+                      <div style=" position: absolute;top: 15%;left: 35%;transform: translate(-50%, -50%);
+                      font-size: 20px;color:powderblue;">${element.Title}</div>
+                      <div style=" position: absolute;top: 30%;left:35%;transform: translate(-50%, -50%);
+                      font-size:10px;color:aqua;display:block;">${element.Description}</div>
                       </div>`;
               ImageSliderCount++;
             }else{
               
               html +=`<div class="item"><img src="${element.ImageURL.Url}" alt="${element.Title}" style='width:100%;height:300px;opacity: 0.9;'>
-                      <div class="inverted-bar" data-content="Lorem ipsum dolor sit amet" style=" position: absolute;top: 15%;left: 35%;transform: translate(-50%, -50%);
-                      ">${element.Title}</div>
-                      <div class="inverted-bar" data-content="Lorem ipsum dolor sit amet" style=" position: absolute;top: 30%;left: 35%;transform: translate(-50%, -50%);
-                      display:block;">${element.Description}</div>
+                      <div style=" position: absolute;top: 15%;left: 35%;transform: translate(-50%, -50%);
+                      font-size: 20px;color:powderblue;">${element.Title}</div>
+                      <div style=" position: absolute;top: 30%;left: 35%;transform: translate(-50%, -50%);
+                      font-size:10px;color:aqua;display:block;">${element.Description}</div>
                       </div>`
               ;
               ImageSliderCount++;
