@@ -51,20 +51,20 @@ export default class AnnouncementsWebPart extends BaseClientSideWebPart<IAnnounc
         var ImageSliderCount = 0;
          listObjects.value.forEach(element => {
         if(ImageSliderCount===0){
-            html +=`<div class='item active'><img src="${element.ImageURL.Url}" alt="${element.Title}" style='width:100%;height:300px;opacity: 0.7;'>
+            html +=`<div class='item active'><img src="${element.ImageURL.Url}" alt="${element.Title}" style='width:100%;height:300px;opacity: 1;'>
             <div style=" position: absolute;top: 15%;left: 35%;transform: translate(-50%, -50%);
-            font-size: 20px;color:powderblue;">${element.Title}</div>
+            font-size: 20px;color:#ffd633;">${element.Title}</div>
             <div style=" position: absolute;top: 30%;left:35%;transform: translate(-50%, -50%);
-            font-size:10px;color:white;display:block;">${element.Description}</div>
+            font-size:14px;color:#ff8080;display:block;">${element.Description}</div>
             </div>`;
             ImageSliderCount++;
           }
         else{
-            html +=`<div class="item"><img src="${element.ImageURL.Url}" alt="${element.Title}" style='width:100%;height:300px;opacity: 0.7;'>
+            html +=`<div class="item"><img src="${element.ImageURL.Url}" alt="${element.Title}" style='width:100%;height:300px;opacity: 1;'>
             <div style=" position: absolute;top: 15%;left: 35%;transform: translate(-50%, -50%);
-            font-size: 20px;color:powderblue;">${element.Title}</div>
+            font-size: 20px;color:#ffd633;">${element.Title}</div>
             <div style=" position: absolute;top: 30%;left: 35%;transform: translate(-50%, -50%);
-            font-size:10px;color:white;display:block;">${element.Description}</div>
+            font-size:14px;color:#ff8080;display:block;">${element.Description}</div>
             </div>`
             ;
             ImageSliderCount++;
@@ -85,7 +85,6 @@ export default class AnnouncementsWebPart extends BaseClientSideWebPart<IAnnounc
   protected get dataVersion(): Version {
     return Version.parse('1.0');
   }
-
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return {
       pages: [
