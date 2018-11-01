@@ -63,17 +63,21 @@ export default class AnnouncementsWebPart extends BaseClientSideWebPart<IAnnounc
       font-size:12px;color:black;display:block;">Founder, CEO, and lead designer of SpaceX, Co-founder, CEO, and product architect of Tesla Inc</div>
       </div>
 
+      <!-- Left and right controls -->
+        <div style="float:left;padding-right: 1%;">
+        <a class="glyphicon glyphicon-chevron-left btn" style="background-color:yellow" href="#myCarousel" data-slide="prev"></a>
+        </div>
+        
+        <div>
+        <a class="glyphicon glyphicon-chevron-right btn" style="background-color:yellow" href="#myCarousel" data-slide="next"></a>
+        </div>
+
       </div>
+      
 </div>
 
-  <!-- Left and right controls -->
-        <button style="background-color:yellow" type="button" class="btn btn-default btn-sm">
-        <span class="glyphicon glyphicon-chevron-left" href="#myCarousel" data-slide="prev"></span>
-        </button>
-        <button style="background-color:yellow" type="button" class="btn btn-default btn-sm">
-        <span class="glyphicon glyphicon-chevron-right" href="#myCarousel" data-slide="next"></span>
-        </button>
-      `;
+ 
+        `;
   }
 
   protected get dataVersion(): Version {
