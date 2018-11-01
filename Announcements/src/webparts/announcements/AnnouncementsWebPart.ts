@@ -21,7 +21,7 @@ export default class AnnouncementsWebPart extends BaseClientSideWebPart<IAnnounc
 
   public render(): void {
     let url = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
-    var AbsoluteURL = this.context.pageContext.web.absoluteUrl;
+    //var AbsoluteURL = this.context.pageContext.web.absoluteUrl;
     SPComponentLoader.loadCss(url);
     this.domElement.innerHTML = `
             
@@ -39,7 +39,7 @@ export default class AnnouncementsWebPart extends BaseClientSideWebPart<IAnnounc
     this.getCarousal();
   }
   getCarousal(){
-    //alert("entered getcarousal event");
+    //alert("entered get carousal event");
     let html: string = '';
     if (Environment.type === EnvironmentType.Local) {
       this.domElement.querySelector('#error').innerHTML = "Sorry this does not work in local workbench";
