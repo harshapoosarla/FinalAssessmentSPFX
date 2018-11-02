@@ -51,20 +51,20 @@ export default class AnnouncementsWebPart extends BaseClientSideWebPart<IAnnounc
         var ImageSliderCount = 0;
          listObjects.value.forEach(element => {
         if(ImageSliderCount===0){
-            html +=`<div class='item active'><img src="${element.ImageURL.Url}" alt="${element.Title}" style='width:100%;height:300px;opacity: 1;'>
-            <div style=" position: absolute;top: 15%;left: 35%;transform: translate(-50%, -50%);
+            html +=`<div class='item active'><img src="${element.ImageURL.Url}" alt="${element.Title}" style='width:100%;height:300px;'>
+            <div style="background-color:black;opacity:0.5;position: absolute;top: 10%;left: 35%;transform: translate(-50%, -50%);
             font-size: 20px;color:#ffd633;">${element.Title}</div>
-            <div style=" position: absolute;top: 30%;left:35%;transform: translate(-50%, -50%);
-            font-size:14px;color:#ff8080;display:block;">${element.Description}</div>
+            <div style="background-color:black;opacity:0.5;position: absolute;top: 30%;left:35%;transform: translate(-50%, -50%);
+            font-size:14px;color:white;display:block;">${element.Description}</div>
             </div>`;
             ImageSliderCount++;
           }
         else{
-            html +=`<div class="item"><img src="${element.ImageURL.Url}" alt="${element.Title}" style='width:100%;height:300px;opacity: 1;'>
-            <div style=" position: absolute;top: 15%;left: 35%;transform: translate(-50%, -50%);
+            html +=`<div class="item"><img src="${element.ImageURL.Url}" alt="${element.Title}" style='width:100%;height:300px;'>
+            <div style="background-color:black;opacity:0.5;position: absolute;top: 10%;left: 35%;transform: translate(-50%, -50%);
             font-size: 20px;color:#ffd633;">${element.Title}</div>
-            <div style=" position: absolute;top: 30%;left: 35%;transform: translate(-50%, -50%);
-            font-size:14px;color:#ff8080;display:block;">${element.Description}</div>
+            <div style="background-color:black;opacity:0.5;position: absolute;top: 30%;left: 35%;transform: translate(-50%, -50%);
+            font-size:14px;color:white;display:block;">${element.Description}</div>
             </div>`
             ;
             ImageSliderCount++;
@@ -76,8 +76,10 @@ export default class AnnouncementsWebPart extends BaseClientSideWebPart<IAnnounc
           
           <div>
           <a class="glyphicon glyphicon-chevron-right btn btn-warning" style="position: absolute; top: 85%; right: 80%;height:30px" href="#myCarousel" data-slide="next"></a>
+          </div>
+          <div id="viewall">
+            <a class="btn btn-warning" data-toggle="tooltip" data-placement="bottom" title="Click to see all Announcements" href="https://acuvateuk.sharepoint.com/sites/TrainingDevSite/Lists/Announcements/AllItems.aspx" target="_blank" style="position: absolute; top: 85%; left: 80%;height:30px ">View All</a>
           </div>`;
-         
         });
       });
   }
