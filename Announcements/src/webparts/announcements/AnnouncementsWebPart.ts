@@ -71,14 +71,14 @@ export default class AnnouncementsWebPart extends BaseClientSideWebPart<IAnnounc
           }
           });
           this.domElement.querySelector('.carousel-inner').innerHTML = html+`<div style="float:left;padding-right: 1%;">
-          <a class="glyphicon glyphicon-chevron-left btn btn-warning" style="position: absolute; top: 85%; right: 90%;height:30px" href="#AnnouncementsDisplay" data-slide="prev"></a>
+          <a class="glyphicon glyphicon-chevron-left btn btn-warning" style="position: absolute; top: 85%; right: 90%;height:30px;background-color:gold" href="#AnnouncementsDisplay" data-slide="prev"></a>
           </div>
           
           <div>
-          <a class="glyphicon glyphicon-chevron-right btn btn-warning" style="position: absolute; top: 85%; right: 80%;height:30px" href="#AnnouncementsDisplay" data-slide="next"></a>
+          <a class="glyphicon glyphicon-chevron-right btn btn-warning" style="position: absolute; top: 85%; right: 80%;height:30px;background-color:gold" href="#AnnouncementsDisplay" data-slide="next"></a>
           </div>
           <div id="viewall">
-            <a class="btn btn-warning" data-toggle="tooltip" data-placement="bottom" title="Click to see all Announcements" href="https://acuvateuk.sharepoint.com/sites/TrainingDevSite/Lists/Announcements/AllItems.aspx" target="_blank" style="position: absolute; top: 85%; left: 80%;height:30px ">View All</a>
+            <a class="btn btn-warning" data-toggle="tooltip" data-placement="bottom" title="Click to see all Announcements" href="https://acuvateuk.sharepoint.com/sites/TrainingDevSite/Lists/Announcements/AllItems.aspx" target="_blank" style="position: absolute; top: 85%; left: 80%;height:30px;background-color:gold">View All</a>
           </div>`;
         });
       });
