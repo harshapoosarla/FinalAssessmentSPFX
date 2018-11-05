@@ -35,7 +35,7 @@ export default class AnnouncementsWebPart extends BaseClientSideWebPart<IAnnounc
 
     $(document).ready(function () {
     });
-    this.getCarousal();//functio to display list items and carousel
+    this.getCarousal();//function to get list items and display list items along with carousel
   }
   getCarousal() {
     //alert("entered get carousal event");
@@ -79,7 +79,7 @@ export default class AnnouncementsWebPart extends BaseClientSideWebPart<IAnnounc
           <div id="viewall">
             <a class="btn btn-warning" data-toggle="tooltip" data-placement="bottom" title="Click to see all Announcements" href="https://acuvateuk.sharepoint.com/sites/TrainingDevSite/Lists/Announcements/AllItems.aspx" target="_blank" style="position: absolute; top: 90%; left: 80%;height:30px;">View All</a>
           </div>`;
-        });
+        });//buttons for previous and next item aredisplayed here---------button(view all)to display the announcements list
       });
     }
   }
